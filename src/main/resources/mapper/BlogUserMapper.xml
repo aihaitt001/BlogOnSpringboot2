@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.djb.springboot2.mapper.BlogUserMapper">
+    <resultMap id="BaseResultMap" type="cn.djb.springboot2.domain.BlogUser">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="INTEGER" property="password" />
+        <result column="salt" jdbcType="INTEGER" property="salt" />
+        <result column="email" jdbcType="INTEGER" property="email" />
+        <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+        <result column="lastchange" jdbcType="TIMESTAMP" property="lastchange" />
+        <result column="admin" jdbcType="VARCHAR" property="admin" />
+		<result column="deleted" jdbcType="INTEGER" property="deleted" />
+    </resultMap>
+
+
+    <insert id="add" parameterType="cn.djb.springboot2.mapper.BlogUserMapper">
+		insert into users(id,username,password,salt,email,admin) values
+		(#{id},#{username},#{password},#{salt},#{email},#{admin})
+	</insert>
+    <select id="checkLogin" parameterType="String" resultMap="BaseResultMap">
+	    select id,username,password,salt,admin from users where username=#{username}
+	</select>
+    <select id="checkUsername" parameterType="String" resultMap="BaseResultMap">
+	    select id,username,email,createtime,lastchange,admin from users where username=#{username}
+	</select>
+    <select id="checkEmail" parameterType="String" resultType="String">
+	    select username from users where email=#{email}
+	</select>
+
+    <select id="getById" parameterType="int" resultMap="BaseResultMap">
+		select id,username,email,createtime,lastchange,admin from users where id=#{id} and deleted=0
+
+	</select>
+
+    <delete id="flushUsers" >
+		delete from users where id>1
+	</delete>
+
+    <delete id="deleteById" parameterType="Integer">
+		delete from users where id = #{id}
+	</delete>
+
+    <update id="updateById" >
+		update users
+		<set>
+			<if test="username!=null">
+			username=#{username},
+			</if>
+			<if test="password!=null">
+				password=#{password},salt=#{salt},
+			</if>
+			<if test="email!=null">
+				email=#{email},
+			</if>
+			<if test="admin!=null">
+				admin=#{admin}
+			</if>
+		</set>
+
+		where id=#{id}
+	</update>
+    <select id="list" resultMap="BaseResultMap">
+
+		select id,username,email,createtime,lastchange,admin from users where deleted=0
+	</select>
+	<select id="listAll" resultMap="BaseResultMap">
+
+		select id,username,email,createtime,lastchange,admin from users
+	</select>
+</mapper>

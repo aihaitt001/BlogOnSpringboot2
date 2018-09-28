@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="cn.djb.springboot2.mapper.BlogArticleMapper">
+
+
+    <resultMap id="BaseResultMap" type="cn.djb.springboot2.domain.BlogArticle">
+        <id column="articleid" jdbcType="INTEGER" property="articleid" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="body" jdbcType="VARCHAR" property="body" />
+        <result column="tags" jdbcType="VARCHAR" property="tags" />
+        <result column="author" jdbcType="VARCHAR" property="author" />
+        <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+		<result column="lastchange" jdbcType="TIMESTAMP" property="lastchange" />
+    </resultMap>
+
+
+	<sql id="BlogArticle_all">
+
+		articleId,title,tags,body,author,createtime,lastchange
+	</sql>
+	<insert id="add" parameterType="cn.djb.springboot2.domain.BlogArticle">
+		insert into articles(articleId,title,tags,body,author) values
+		(#{articleId},#{title},#{tags},#{body},#{author})
+	</insert>
+	
+	
+	<select id="getByArticleId" parameterType="Integer" resultMap="BaseResultMap">
+		select <include refid="BlogArticle_all"/> from articles where articleId=#{articleId}
+
+	</select>
+	
+	<select id="listByAuthor" parameterType="String" resultMap="BaseResultMap">
+		select <include refid="BlogArticle_all"/> from articles where author = #{author} order by createtime desc
+	
+	</select>
+	<delete id="deleteByArticleId" parameterType="Integer">
+		delete from articles where articleId = #{articleId}
+	</delete>
+	<delete id="flushDB" parameterType="Integer">
+		delete from articles where 1=1
+	</delete>
+	<update id="updateByArticleId" parameterType="cn.djb.springboot2.domain.BlogArticle">
+		update articles
+		<set>
+			<if test="title!=null">
+				title=#{title},
+			</if>
+			<if test="tags!=null">
+				tags=#{tags},
+			</if>
+			<if test="body!=null">
+				body=#{body},
+			</if>
+			<if test="author!=null">
+				author=#{author}
+			</if>
+
+		</set>
+		 where articleId=#{articleId}
+	</update>
+	<select id="list" resultMap="BaseResultMap">
+
+		select <include refid="BlogArticle_all"/> from articles  order by createtime desc
+	</select>
+
+	<select id="listHomeArticles" resultMap="BaseResultMap">
+
+		select  <include refid="BlogArticle_all"/> FROM ssm.articles order by createtime desc limit 6
+	</select>
+</mapper>

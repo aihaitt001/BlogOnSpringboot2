@@ -1,0 +1,27 @@
+
+/*解决首页长文章占用空间太大问题
+
+*/
+.hiddenText{
+	
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hiddenText p{
+	
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+.hiddenText code{
+	
+    display:none;
+}
+.hiddenText img{
+	display:none;
+}
+

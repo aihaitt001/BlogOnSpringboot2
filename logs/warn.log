@@ -9,3 +9,4 @@
 [2018-09-27 16:40:01] WARN  org.springframework.boot.devtools.autoconfigure.RemoteDevToolsAutoConfiguration$RemoteRestartConfiguration 138 remoteRestartHandlerMapper - Listening for remote restart updates on /.~~spring-boot!~/restart
 [2018-09-27 16:46:18] WARN  org.springframework.boot.devtools.autoconfigure.RemoteDevToolsAutoConfiguration$RemoteRestartConfiguration 138 remoteRestartHandlerMapper - Listening for remote restart updates on /.~~spring-boot!~/restart
 [2018-09-27 16:59:20] WARN  org.springframework.boot.devtools.autoconfigure.RemoteDevToolsAutoConfiguration$RemoteRestartConfiguration 138 remoteRestartHandlerMapper - Listening for remote restart updates on /.~~spring-boot!~/restart
+[2018-09-29 14:30:20] WARN  org.springframework.boot.devtools.autoconfigure.RemoteDevToolsAutoConfiguration$RemoteRestartConfiguration 138 remoteRestartHandlerMapper - Listening for remote restart updates on /.~~spring-boot!~/restart

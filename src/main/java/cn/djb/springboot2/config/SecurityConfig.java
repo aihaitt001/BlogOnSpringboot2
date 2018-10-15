@@ -41,7 +41,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
          and().httpBasic().realmName("spring_security_demo").and()
             .authorizeRequests().antMatchers("/article").hasRole("user")
             .antMatchers("/user","/users").hasRole("admin")
-            .anyRequest().permitAll();
+            .anyRequest().permitAll()
+            .and().csrf().disable();
 
     }
 

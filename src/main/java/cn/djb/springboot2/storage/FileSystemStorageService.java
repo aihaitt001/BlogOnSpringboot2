@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -24,10 +25,16 @@ public class FileSystemStorageService implements StorageService {
     Logger logger = LogManager.getLogger(this.getClass().getName());
     private final Path rootLocation;
 
+
     @Autowired
     public FileSystemStorageService(StorageProperties properties) {
         this.rootLocation = Paths.get(properties.getLocation());
     }
+//    @Autowired //未解决
+//    public FileSystemStorageService() {
+//        this.rootLocation = Paths.get(this.uploadfilePath);//空指针的问题
+//    }
+
 
     @Override
     public void store(MultipartFile file) {

@@ -21,22 +21,48 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
+/**
+ *
+ *@decription 保存文件的具体实现类.
+ *@classname FileSystemStorageService
+ *@author ovo
+ *@date 2018/10/17 10:23
+ *
+ */
 public class FileSystemStorageService implements StorageService {
     Logger logger = LogManager.getLogger(this.getClass().getName());
     private final Path rootLocation;
 
 
     @Autowired
+    /**
+     *@decription 初始化服务
+     *@name FileSystemStorageService
+     *@param [properties] @see cn.djb.springboot2.storage.StorageProperties
+     *@return
+     *@author ovo
+     *@date 2018/10/17  13:51
+     *
+     */
     public FileSystemStorageService(StorageProperties properties) {
         this.rootLocation = Paths.get(properties.getLocation());
     }
-//    @Autowired //未解决
+//    @Autowired //未解决   配置文件
 //    public FileSystemStorageService() {
 //        this.rootLocation = Paths.get(this.uploadfilePath);//空指针的问题
 //    }
 
 
     @Override
+    /**
+     *@decription 保存文件,会覆盖重名文件
+     *@name store
+     *@param [file]
+     *@return void
+     *@author ovo
+     *@date 2018/10/15  17:33
+     *
+     */
     public void store(MultipartFile file) {
         String filename = StringUtils.cleanPath(file.getOriginalFilename());
         try {
@@ -60,9 +86,26 @@ public class FileSystemStorageService implements StorageService {
     }
 
     @Override
+    /**
+     *@decription 加载所有文件,并把所有路径合并为Stream<Path>
+     *@name loadAll
+     *@param []
+     *@return java.util.stream.Stream<java.nio.file.Path>
+     *@author ovo
+     *@date 2018/10/17  10:20
+     *
+     */
     public Stream<Path> loadAll() {
         try {
-            return Files.walk(this.rootLocation, 1)
+
+            Stream<Path> pathlist = Files.walk(this.rootLocation, 1);
+//count会关闭流
+//            if(pathlist.count()==0){
+//                logger.info("文件夹为空:stream.count="+pathlist.count());
+//            }else{
+//                logger.info("文件夹不为空:stream.count="+pathlist.count());
+//            }
+            return pathlist
                 .filter(path -> !path.equals(this.rootLocation))
                 .map(this.rootLocation::relativize);
         }

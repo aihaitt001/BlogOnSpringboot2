@@ -4,8 +4,6 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
     <title>hahahaha</title>
     <script src="./static/ckeditor/ckeditor.js"></script>
 </head>
@@ -16,7 +14,7 @@
 
 <!-- th:action 会自动添加token,防止CSRF -->
 <div>
-    <form method="POST" enctype="multipart/form-data" th:action="@{/upload}">
+    <form method="POST" enctype="multipart/form-data" th:action="@{/files/upload/file}">
         <table>
             <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
             <tr><td></td><td><input type="submit" value="Upload" /></td></tr>

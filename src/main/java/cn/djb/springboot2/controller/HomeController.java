@@ -20,11 +20,10 @@ public class HomeController {
 
     @GetMapping("/home")
     public ModelAndView home(ModelAndView mav) {
-        mav.setViewName("article");
+        mav.setViewName("/home");
         return mav;
     }
     @GetMapping("/getHomeArticles")
-
     public List<BlogArticle> getHomeArticle()
     {
         logger.info("getHomeArticles");

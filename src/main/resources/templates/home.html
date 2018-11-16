@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- saved from url=(0049)https://v3.bootcss.com/examples/jumbotron-narrow/ -->
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>LifeForFun_main</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./static/css/bootstrap_3.3.7_css_bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./static/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="./static/css/hiddenText.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <script src="./static/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="./static/js/html5shiv.min.js"></script>
+    <script src="./static/js/respond.min.js"></script>
+    <![endif]-->
 </head>
+
 <body>
+
+<div class="container">
+    <div class="header clearfix">
+
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a
+                        href="/home">Home</a></li>
+                <li role="presentation"><a href="/articles">Logs</a></li>
+                <li role="presentation"><a href="/contactMe">Contact</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">LifeForFun</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>
+            Hello, world!
+        </h1>
+        <p>
+            FOR LIFE FOR FUN
+        </p>
+
+    </div>
+
+    <div class="row marketing">
+
+        <div class="hiddenText col-lg-8"  id="main_40">
+            <h4>Hello World!</h4>
+            <p class="mainbody">
+            <p>本网站一切文章都是自己亲身经历，都是可以用的解决方案，谢绝乌七八糟的转载和标题党。</p>
+            <a href="https://github.com/aihaitt001/SSM_BLOG">github项目地址</a>
+            <a class="btn" href="/springmvc/mains/40">详情</a>
+
+        </div>
+
+    </div>
+
+    <hr>
+    <div class="row marketing">
+
+        <div class=" hiddenText" id="main_48">
+            <h4>ArrayList源码中一段很迷的代码</h4>
+            <p class="blog-post-meta">2018.9.25 14:02 by ovo</p>
+            <p class="mainbody">
+
+            <p>这是在使用add(int&nbsp; index,object
+                e)的时候发现的问题，你即使设定了ArrayList的大小，也依然无法直接插入add(1,e)，原因就是在这个add方法中，会有一次判断，这次判断会比较Index和size的值，index必须等于或小于size，负责会报错。</p>
+            <p>源代码</p>
+            <p><code>/** * A version of rangeCheck used by add and addAll. */ </code></p>
+            <p><code>private void rangeCheckForAdd(int index) {</code></p>
+            <p><code>&nbsp; if (index &gt; size || index &lt; 0) </code></p>
+            <p><code>&nbsp; &nbsp; throw new IndexOutOfBoundsException(outOfBoundsMsg(index));</code></p>
+            <p><code>} </code></p>
+            </p>
+
+            <a class="btn" href="/springmvc/mains/48">详情</a>
+
+        </div>
+
+    </div>
+
+
+
+    <footer class="footer">
+        <p>© 2016 Company, Inc.</p>
+    </footer>
+
+</div> <!-- /container -->
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./static/ie10-viewport-bug-workaround.js"></script>
+
 
 </body>
 </html>

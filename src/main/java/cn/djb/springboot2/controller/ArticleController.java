@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ArticleController {
-    @RequestMapping("/articles")
+    @RequestMapping("/body/articles")
     public String articles(){
         return "articles list";
     }
-    @RequestMapping("/article")
+    @RequestMapping("/body/article")
     public String article(){
         return "article";
     }

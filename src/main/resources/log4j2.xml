@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="OFF">
+    <!--status="OFF"可以去掉自身的所有日志输出-->
     <appenders>
-
         <Console name="Console" target="SYSTEM_OUT">
             <!--只接受程序中DEBUG级别的日志进行处理-->
-            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
-            <PatternLayout pattern="[%d{HH:mm:ss.SSS}] %-5level %class{36} %L %M - %msg%xEx%n"/>
+            <Filters>
+                <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+
+            <PatternLayout pattern="[%d{HH:mm:ss.SSS}]  %-5level %class{36} %L %M - %msg%xEx%n"/>
         </Console>
 
         <!--处理DEBUG级别的日志，并把该日志放到logs/debug.log文件中-->
@@ -88,9 +92,6 @@
         </root>
 
         <!--记录druid-sql的记录-->
-        <logger name="druid.sql.Statement" level="debug" additivity="false">
-            <appender-ref ref="druidSqlRollingFile"/>
-        </logger>
         <logger name="druid.sql.Statement" level="debug" additivity="false">
             <appender-ref ref="druidSqlRollingFile"/>
         </logger>

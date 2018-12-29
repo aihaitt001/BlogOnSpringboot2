@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://v3.bootcss.com/examples/jumbotron-narrow/ -->
-<html lang="zh-CN">
+<html lang="zh-CN"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -8,103 +8,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="ovo">
     <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
 
-    <title>LifeForFun_main</title>
+    <title>LifeForFun_Home</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./static/css/bootstrap_3.3.7_css_bootstrap.min.css" rel="stylesheet">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="./static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="./static/css/jumbotron-narrow.css" rel="stylesheet">
-    <link href="./static/css/hiddenText.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <script src="./static/js/ie-emulation-modes-warning.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="./static/js/html5shiv.min.js"></script>
     <script src="./static/js/respond.min.js"></script>
     <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./static/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="./static/css/home.css" rel="stylesheet">
+
+    <link href="./static/css/hiddenText.css" rel="stylesheet">
+
 </head>
 
 <body>
+    <!-- header -->
+    <!-- 导航条 开始-->
+    <div th:replace="/frame/pageHeader :: copy"></div>
+    <!-- header 结束 -->
 
-<div class="container">
-    <div class="header clearfix">
+        <div class=" container-fluid mainbody ">
+            <div class=" row col-xs-10 col-md-10 col-lg-10 col-xs-offset-1 col-md-offset-1 col-lg-offset-1">
+                <div class="ibody col-xs-9 column col-md-9 col-lg-9 ">
+                    <div class="row ">
+                        <ul class="nav nav-pills itags">
+                            <li>
+                                <a href="/home">&nbsp;•&nbsp;所有</a>
+                            </li>
 
-        <nav>
-            <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a
-                        href="/home">Home</a></li>
-                <li role="presentation"><a href="/articles">Logs</a></li>
-                <li role="presentation"><a href="/contactMe">Contact</a></li>
-            </ul>
-        </nav>
-        <h3 class="text-muted">LifeForFun</h3>
-    </div>
+                            <li>
 
-    <div class="jumbotron">
-        <h1>
-            Hello, world!
-        </h1>
-        <p>
-            FOR LIFE FOR FUN
-        </p>
+                                <a href="/home">&nbsp;•&nbsp;技术</a>
+                            </li>
 
-    </div>
+                            <li>
 
-    <div class="row marketing">
+                                <a href="/home">&nbsp;•&nbsp;日常</a>
+                            </li>
 
-        <div class="hiddenText col-lg-8"  id="main_40">
-            <h4>Hello World!</h4>
-            <p class="mainbody">
-            <p>本网站一切文章都是自己亲身经历，都是可以用的解决方案，谢绝乌七八糟的转载和标题党。</p>
-            <a href="https://github.com/aihaitt001/SSM_BLOG">github项目地址</a>
-            <a class="btn" href="/springmvc/mains/40">详情</a>
+                            <li>
 
+                                <a href="/home">&nbsp;•&nbsp;创意</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row itabs">
+
+                        <a class="node" href="/home">最新</a>
+
+                        <a class="node" href="/home">最热</a>
+
+                        <a class="node" href="/home">浏览最多</a>
+                    </div>
+                    <div class="iarticles">
+                        <div class="row iarticle " th:each="article : ${articlelist}">
+                            <div class="column col-xs-1 col-md-1 col-lg-1  author_img">
+                                <a href="/manage/member/ovo">
+                                    <img src="/static/imgs/ovo.gif" alt="ovo的头像"/>
+                                </a>
+                            </div>
+                            <div class="column col-xs-10 col-md-10 col-lg-10 article_main">
+                                <div class="article_title" th:text="${article.title}">
+                                    <p>article.title</p>
+                                </div>
+
+                                <div>
+                                    Created By <a th:href="'/manage/member/'+${article.author}" ><Strong  th:text="${article.author}">OvO</Strong></a> on <strong th:text="${article.createtime}">2018.11.27</strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row iarticle " >
+
+                        <div class="column col-xs-1 col-md-1 col-lg-1  author_img">
+                            <a href="/manage/member/ovo">
+                                <img src="/static/imgs/ovo.gif" alt="ovo的头像"/>
+                            </a>
+                        </div>
+
+                        <div class="column col-xs-10 col-md-10 col-lg-10   article_main">
+                            <div class="article_title">
+                                <a href="home.html">For Fun For Life!</a>
+                            </div>
+                            <div class="article_info">
+                                Created By <a href="/manage/member/ovo"><Strong>OvO</Strong></a> on <strong>2018.11.27</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column col-xs-3 col-md-3 col-lg-3  ">
+                        <div class="jumbotron">
+                            <h2>
+                                Hello, world!
+                            </h2>
+                            <h4>
+                                FOR LIFE FOR FUN
+                            </h4>
+                        </div>
+                </div>
+            </div>
         </div>
-
-    </div>
-
-    <hr>
-    <div class="row marketing">
-
-        <div class=" hiddenText" id="main_48">
-            <h4>ArrayList源码中一段很迷的代码</h4>
-            <p class="blog-post-meta">2018.9.25 14:02 by ovo</p>
-            <p class="mainbody">
-
-            <p>这是在使用add(int&nbsp; index,object
-                e)的时候发现的问题，你即使设定了ArrayList的大小，也依然无法直接插入add(1,e)，原因就是在这个add方法中，会有一次判断，这次判断会比较Index和size的值，index必须等于或小于size，负责会报错。</p>
-            <p>源代码</p>
-            <p><code>/** * A version of rangeCheck used by add and addAll. */ </code></p>
-            <p><code>private void rangeCheckForAdd(int index) {</code></p>
-            <p><code>&nbsp; if (index &gt; size || index &lt; 0) </code></p>
-            <p><code>&nbsp; &nbsp; throw new IndexOutOfBoundsException(outOfBoundsMsg(index));</code></p>
-            <p><code>} </code></p>
-            </p>
-
-            <a class="btn" href="/springmvc/mains/48">详情</a>
-
-        </div>
-
-    </div>
-
-
-
-    <footer class="footer">
-        <p>© 2016 Company, Inc.</p>
-    </footer>
-
-</div> <!-- /container -->
-
-
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./static/ie10-viewport-bug-workaround.js"></script>
-
 
 </body>
+<footer>
+    <div class="container-fluid ifooter">
+        <div class=" row col-xs-12 col-md-12 col-lg-12  ">
+            <!-- footer -->
+            <div th:replace="/frame/pageFooter :: copy"> </div>
+            <!-- footer 结束-->
+        </div>
+    </div>
+
+</footer>
 </html>

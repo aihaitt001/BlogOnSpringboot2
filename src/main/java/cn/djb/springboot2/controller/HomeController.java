@@ -20,6 +20,9 @@ public class HomeController {
 
     @GetMapping("/home")
     public ModelAndView home(ModelAndView mav) {
+        logger.info("home");
+        List<BlogArticle> articlelist =service.listHomeArticles();
+        mav.addObject("articlelist",articlelist);
         mav.setViewName("/home");
         return mav;
     }

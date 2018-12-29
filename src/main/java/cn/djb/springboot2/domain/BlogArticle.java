@@ -3,7 +3,7 @@ package cn.djb.springboot2.domain;
 import java.sql.Timestamp;
 
 public class BlogArticle {
-    private Integer articleId;
+    private Integer articleid;
     private String title;
     private String tags;
     private String body;
@@ -28,12 +28,12 @@ public class BlogArticle {
         this.deleted = deleted;
     }
 
-    public void setArticleId(Integer articleId) {
-        this.articleId = articleId;
+    public void setArticleid(Integer articleid) {
+        this.articleid = articleid;
     }
 
-    public Integer getArticleId() {
-        return articleId;
+    public Integer getArticleid() {
+        return articleid;
     }
 
     public void setTitle(String title) {
@@ -78,7 +78,7 @@ public class BlogArticle {
 
     @Override
     public String toString() {
-        return "{Article: [ArticleId=" + articleId + ",title=" + title + ",author=" + author + ",tags=" + tags
+        return "{Article: [articleid=" + articleid + ",title=" + title + ",author=" + author + ",tags=" + tags
                 + ",body=" + body + ",createtime=" + createtime + "]}";
     }
 }

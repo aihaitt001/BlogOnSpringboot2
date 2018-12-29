@@ -1,0 +1,103 @@
+a{
+  color:#000000;
+}
+.mainbody{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #e2e2e2;
+}
+
+.ibody{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-width: 5px;
+  background-color: #f9f9f9;
+
+}
+.itags{
+  background-color: #f9f9f9;
+}
+.itabs{
+padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #eee;
+}
+.node{
+  font-size: 20px;
+  background-color:#f5f5f5;
+}
+.iarticle{
+  border:solid;
+  border-width: 1px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-color: #e2e2e2;
+  background-color: #f9f9f9;
+}
+
+.author_img{
+    border:0px;
+    height: 48px;
+    width: 48px;
+    float:left;
+}
+.article_main{
+ padding-left: 20px;
+}
+.iarticle a{
+  font-size: 20px;
+  color:#000000;
+}
+
+.iarticle img{
+  align-content: center;
+}
+.iheader{
+ padding-top: 10px;
+  background-color: #f9f9f9;
+}
+
+.navbar{
+
+  border-width: 0px;
+}
+
+.navbar-brand{
+  font-style: normal;
+  font-size: large;
+  color:#000000;
+}
+.ifooter{
+  border-width: 5px;
+
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+
+  border-bottom: 1px solid ;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.jumbotron {
+
+  text-align: center;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+

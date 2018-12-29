@@ -46,3 +46,4 @@ configurations {
     // remove default logger
     all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
 }
+

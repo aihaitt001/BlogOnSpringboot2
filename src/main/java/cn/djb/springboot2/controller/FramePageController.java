@@ -46,12 +46,8 @@ public class FramePageController {
     }
     @GetMapping("/body/contactMe")
     public ModelAndView contactMe(ModelAndView mav){
-        mav.setViewName("/contactMe");
+        mav.setViewName("/body/contactMe");
         return mav;
     }
-    @GetMapping("/body/allArticles")
-    public ModelAndView allarticles(ModelAndView mav){
-        mav.setViewName("/AllArticles");
-        return mav;
-    }
+
 }

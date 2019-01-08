@@ -1,4 +1,6 @@
+
 buildscript {
+    
     ext {
         springBootVersion = '2.0.5.RELEASE'
     }
@@ -46,4 +48,5 @@ configurations {
     // remove default logger
     all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
 }
+
 

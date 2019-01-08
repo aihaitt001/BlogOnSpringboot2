@@ -1,1 +1,2 @@
 rootProject.name = 'springboot2'
+enableFeaturePreview('IMPROVED_POM_SUPPORT')

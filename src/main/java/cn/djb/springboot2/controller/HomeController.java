@@ -23,7 +23,7 @@ public class HomeController {
         logger.info("home");
         List<BlogArticle> articlelist =service.listHomeArticles();
         mav.addObject("articlelist",articlelist);
-        mav.setViewName("/home");
+        mav.setViewName("home");
         return mav;
     }
     @GetMapping("/getHomeArticles")

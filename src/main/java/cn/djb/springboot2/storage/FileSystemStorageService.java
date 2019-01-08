@@ -32,7 +32,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileSystemStorageService implements StorageService {
     Logger logger = LogManager.getLogger(this.getClass().getName());
     private final Path rootLocation;
-
+private final Path imagesLocation;
 
     @Autowired
     /**
@@ -46,6 +46,7 @@ public class FileSystemStorageService implements StorageService {
      */
     public FileSystemStorageService(StorageProperties properties) {
         this.rootLocation = Paths.get(properties.getLocation());
+        this.imagesLocation=Paths.get(properties.getImagesLocation());
     }
 //    @Autowired //未解决   配置文件
 //    public FileSystemStorageService() {
@@ -75,9 +76,34 @@ public class FileSystemStorageService implements StorageService {
                         "Cannot store file with relative path outside current directory "
                                 + filename);
             }
+
             try (InputStream inputStream = file.getInputStream()) {
                 Files.copy(inputStream, this.rootLocation.resolve(filename),
                     StandardCopyOption.REPLACE_EXISTING);
+            }
+        }
+        catch (IOException e) {
+            throw new StorageException("Failed to store file " + filename, e);
+        }
+    }
+@Override
+    public void storeImage(MultipartFile image) {
+        String filename = StringUtils.cleanPath(image.getOriginalFilename());
+        try {
+            if (image.isEmpty()) {
+                throw new StorageException("Failed to store empty file " + filename);
+            }
+            if (filename.contains("..")) {
+                // This is a security check
+                throw new StorageException(
+                        "Cannot store file with relative path outside current directory "
+                                + filename);
+            }
+
+            try (InputStream inputStream = image.getInputStream()) {
+                Files.copy(inputStream, this.imagesLocation.resolve(filename),
+                        StandardCopyOption.REPLACE_EXISTING);
+                System.out.println("保存的图片为:"+this.imagesLocation.resolve(filename));
             }
         }
         catch (IOException e) {

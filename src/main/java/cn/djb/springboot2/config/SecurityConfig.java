@@ -66,7 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     @Bean
-    /*
+    /* @FIXIT
     *@Decription:spring security在5.0之后已经过期了.暂时用明文密码，还是要用passwordENCODER
     *@name:passwordEncoder
     *@param:[]

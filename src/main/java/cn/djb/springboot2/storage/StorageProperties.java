@@ -22,6 +22,8 @@ public class StorageProperties {
    // private String uploadfilespath;
     @Value(value = "${upload.files.path}")
     private String location ;
+    @Value(value = "${ckeditor.storage.image.path}")
+    private String imagesLocation;
 
     public String getLocation() {
         return location;
@@ -30,5 +32,9 @@ public class StorageProperties {
     public void setLocation(String location) {
         this.location = location;
     }
+
+
+    public String getImagesLocation(){return imagesLocation;}
+    public void setImagesLocation(String location){this.imagesLocation=location;}
 
 }

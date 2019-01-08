@@ -1,66 +1,11 @@
-[2018-09-27 16:08:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:08:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [admin]
-[2018-09-27 16:08:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:08:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 18.820855 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:08:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:09:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:09:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test]
-[2018-09-27 16:09:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:09:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 4.719547 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:09:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:18:24] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:18:24] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:18:24] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:18:24] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 4.29377 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:18:24] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:21:03] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:21:03] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:21:03] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:21:03] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 4.132437 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:21:03] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:28:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:28:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:28:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:28:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 3.467105 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:28:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:30:16] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:30:16] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:30:16] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:30:16] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 3.720437 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:30:16] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:31:55] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:31:55] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:31:55] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:31:55] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 3.833771 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:31:55] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:34:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:34:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:34:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:34:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 4.734214 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:34:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:40:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:40:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:40:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:40:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 4.033326 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:40:01] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:46:19] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:46:19] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:46:19] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:46:19] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 4.30177 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:46:19] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-09-27 16:59:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:59:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test ]
-[2018-09-27 16:59:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
-[2018-09-27 16:59:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 4.074215 millis. select id,username,email,createtime,lastchange,admin from users where username=?
-[2018-09-27 16:59:21] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
-[2018-10-12 10:33:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select   
+[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select   
 
 		articleId,title,tags,body,author,createtime,lastchange
 	  FROM ssm.articles order by createtime desc limit 6
-[2018-10-12 10:33:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : []
-[2018-10-12 10:33:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : []
-[2018-10-12 10:33:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 25.360911 millis. select   
+[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : []
+[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : []
+[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 19.171966 millis. select   
 
 		articleId,title,tags,body,author,createtime,lastchange
 	  FROM ssm.articles order by createtime desc limit 6
-[2018-10-12 10:33:43] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
+[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed

@@ -24,12 +24,14 @@ import java.util.List;
 @Configuration
 public class WebConfig  implements WebMvcConfigurer {
 
-    @Value(value = "${upload.files.path}")
-    private String uploadFilesPath ;
+    @Value(value = "${ckeditor.storage.image.path}")
+    private String uploadFilesPath;
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("public/image/**").addResourceLocations("file:"+uploadFilesPath+"//");
-        registry.addResourceHandler("static/**").addResourceLocations("classpath:static/");
+        //ckeditor上传的图片
+        registry.addResourceHandler("/public/image/**").addResourceLocations("file:"+uploadFilesPath+"/");
+        //所有的静态资源
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
 
     @Bean

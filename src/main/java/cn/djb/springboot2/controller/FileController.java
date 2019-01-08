@@ -50,33 +50,10 @@ public class FileController {
     }
 
 
-//    @GetMapping("/download")
-//    public ResponseEntity<Resource> downloadFile(@RequestParam String filename)
-//            throws IOException {
-//
-//        Resource file = storageService.loadAsResource(filename);
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
-//
-//        // 设置下载时的文件名，中文文件名需要进行转码，否则是乱码
-//        headers.add("Content-Disposition",
-//                "attachment; filename=" +
-//                        new String(file.getFilename().getBytes("UTF-8"), "iso-8859-1"));
-//        headers.add("Pragma", "no-cache");
-//        headers.add("Expires", "0");
-//
-//        return ResponseEntity
-//                .ok()
-//                .headers(headers)
-//                .contentLength(file.contentLength())
-//                .contentType(MediaType.parseMediaType("application/octet-stream"))
-//                .body(file);
-//    }
-
     @GetMapping("/download")
     public ResponseEntity<Resource> download(@RequestParam String filename) throws IOException{
 //要转码以  支持中文文件名
-        Resource file = storageService.loadAsResource(filename);
+        Resource  file  = storageService.loadAsResource(filename);
         return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
                 "attachment; filename=\"" +  new String(file.getFilename().getBytes("UTF-8"), "iso-8859-1") + "\"").body(file);
     }

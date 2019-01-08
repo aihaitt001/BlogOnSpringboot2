@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class LoginController {
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public String login(@RequestParam("loginuser") BlogUser loginuser){
 
         return "成功";

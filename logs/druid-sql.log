@@ -1,11 +1,134 @@
-[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select   
+[2019-01-09 16:06:50] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select   
 
 		articleId,title,tags,body,author,createtime,lastchange
 	  FROM ssm.articles order by createtime desc limit 6
-[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : []
-[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : []
-[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 19.171966 millis. select   
+[2019-01-09 16:06:50] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : []
+[2019-01-09 16:06:50] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : []
+[2019-01-09 16:06:50] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 18.366223 millis. select   
 
 		articleId,title,tags,body,author,createtime,lastchange
 	  FROM ssm.articles order by createtime desc limit 6
-[2019-01-08 10:24:38] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
+[2019-01-09 16:06:50] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
+[2019-01-09 16:52:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 16:52:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : []
+[2019-01-09 16:52:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : []
+[2019-01-09 16:52:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 2.269777 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 16:52:33] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
+[2019-01-09 19:01:36] DEBUG 137 statementLog - {conn-110001, pstmt-120000} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:01:36] DEBUG 137 statementLog - {conn-110001, pstmt-120000} Parameters : []
+[2019-01-09 19:01:36] DEBUG 137 statementLog - {conn-110001, pstmt-120000} Types : []
+[2019-01-09 19:01:36] DEBUG 137 statementLog - {conn-110001, pstmt-120000} executed. 2.225333 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:01:36] DEBUG 137 statementLog - {conn-110001, pstmt-120000} closed
+[2019-01-09 19:01:45] DEBUG 137 statementLog - {conn-110001, pstmt-120001} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:01:45] DEBUG 137 statementLog - {conn-110001, pstmt-120001} Parameters : []
+[2019-01-09 19:01:45] DEBUG 137 statementLog - {conn-110001, pstmt-120001} Types : []
+[2019-01-09 19:01:45] DEBUG 137 statementLog - {conn-110001, pstmt-120001} executed. 0.861778 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:01:45] DEBUG 137 statementLog - {conn-110001, pstmt-120001} closed
+[2019-01-09 19:04:23] DEBUG 137 statementLog - {conn-210001, pstmt-220000} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:04:23] DEBUG 137 statementLog - {conn-210001, pstmt-220000} Parameters : []
+[2019-01-09 19:04:23] DEBUG 137 statementLog - {conn-210001, pstmt-220000} Types : []
+[2019-01-09 19:04:23] DEBUG 137 statementLog - {conn-210001, pstmt-220000} executed. 1.771111 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:04:23] DEBUG 137 statementLog - {conn-210001, pstmt-220000} closed
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test]
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 6.009333 millis. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20001} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20001} Parameters : []
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20001} Types : []
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20001} executed. 1.592 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:14:46] DEBUG 137 statementLog - {conn-10001, pstmt-20001} closed
+[2019-01-09 19:15:48] DEBUG 137 statementLog - {conn-110001, pstmt-120000} created. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:15:48] DEBUG 137 statementLog - {conn-110001, pstmt-120000} Parameters : [13269286775]
+[2019-01-09 19:15:48] DEBUG 137 statementLog - {conn-110001, pstmt-120000} Types : [VARCHAR]
+[2019-01-09 19:15:48] DEBUG 137 statementLog - {conn-110001, pstmt-120000} executed. 1.904445 millis. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:15:48] DEBUG 137 statementLog - {conn-110001, pstmt-120000} closed
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120001} created. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120001} Parameters : [test]
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120001} Types : [VARCHAR]
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120001} executed. 0.692 millis. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120001} closed
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120002} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120002} Parameters : []
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120002} Types : []
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120002} executed. 1.532444 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:15:58] DEBUG 137 statementLog - {conn-110001, pstmt-120002} closed
+[2019-01-09 19:16:11] DEBUG 137 statementLog - {conn-110001, pstmt-120003} created. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:16:11] DEBUG 137 statementLog - {conn-110001, pstmt-120003} Parameters : [111]
+[2019-01-09 19:16:11] DEBUG 137 statementLog - {conn-110001, pstmt-120003} Types : [VARCHAR]
+[2019-01-09 19:16:11] DEBUG 137 statementLog - {conn-110001, pstmt-120003} executed. 0.946667 millis. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:16:11] DEBUG 137 statementLog - {conn-110001, pstmt-120003} closed
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test]
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 1.896889 millis. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20001} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20001} Parameters : []
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20001} Types : []
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20001} executed. 1.627111 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:20:10] DEBUG 137 statementLog - {conn-10001, pstmt-20001} closed
+[2019-01-09 19:29:30] DEBUG 137 statementLog - {conn-10001, pstmt-20000} created. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:29:30] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Parameters : [test]
+[2019-01-09 19:29:30] DEBUG 137 statementLog - {conn-10001, pstmt-20000} Types : [VARCHAR]
+[2019-01-09 19:29:30] DEBUG 137 statementLog - {conn-10001, pstmt-20000} executed. 2.170666 millis. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:29:30] DEBUG 137 statementLog - {conn-10001, pstmt-20000} closed
+[2019-01-09 19:29:31] DEBUG 137 statementLog - {conn-10001, pstmt-20001} created. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:29:31] DEBUG 137 statementLog - {conn-10001, pstmt-20001} Parameters : []
+[2019-01-09 19:29:31] DEBUG 137 statementLog - {conn-10001, pstmt-20001} Types : []
+[2019-01-09 19:29:31] DEBUG 137 statementLog - {conn-10001, pstmt-20001} executed. 1.577333 millis. select   
+
+		articleId,title,tags,body,author,createtime,lastchange
+	  FROM ssm.articles order by createtime desc limit 6
+[2019-01-09 19:29:31] DEBUG 137 statementLog - {conn-10001, pstmt-20001} closed
+[2019-01-09 19:29:48] DEBUG 137 statementLog - {conn-10001, pstmt-20002} created. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:29:48] DEBUG 137 statementLog - {conn-10001, pstmt-20002} Parameters : [test]
+[2019-01-09 19:29:48] DEBUG 137 statementLog - {conn-10001, pstmt-20002} Types : [VARCHAR]
+[2019-01-09 19:29:48] DEBUG 137 statementLog - {conn-10001, pstmt-20002} executed. 0.650667 millis. select id,username,password,salt,admin from users where username=?
+[2019-01-09 19:29:48] DEBUG 137 statementLog - {conn-10001, pstmt-20002} closed

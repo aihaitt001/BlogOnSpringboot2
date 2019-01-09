@@ -7,10 +7,5 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class SimplePageController {
 
-    @GetMapping("/body/login")
-    public ModelAndView getLoginPage(){
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("/body/login");
-        return mav;
-    }
+
 }
